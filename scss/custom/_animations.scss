@@ -1,0 +1,36 @@
+$short-transition:     200ms;
+$normal-transition:     400ms;
+$long-transition:     600ms;
+
+@mixin css-transition($time) {
+   -webkit-transition: all $time ease-in-out;
+   -moz-transition: all $time ease-in-out;
+   -o-transition: all $time ease-in-out;
+   transition: all $time ease-in-out;
+}
+
+@keyframes buttonAnimation {
+  	0%   { transform: translateY(-20px); }
+  	50%   { transform: translateY(0px); }
+  	100%   { transform: translateY(-20px); }
+}
+@-moz-keyframes buttonAnimation {
+	0%   { -moz-transform: translateY(-20px); }
+	50%   { -moz-transform: translateY(0px); }
+	100%   { -moz-transform: translateY(-20px); }
+}
+@-webkit-keyframes buttonAnimation {
+	0%   { -webkit-transform: translateY(-20px); }
+	50%   { -webkit-transform: translateY(0px); }
+	100%   { -webkit-transform: translateY(-20px); }
+}
+@-ms-keyframes buttonAnimation {
+	0%   { -ms-transform: translateY(-20px); }
+	50%   { -ms-transform: translateY(0px); }
+	100%   { -ms-transform: translateY(-20px); }
+}
+@-o-keyframes buttonAnimation {
+	0%   { -o-transform: translateY(-20px); }
+	50%   { -o-transform: translateY(0px); }
+	100%   { -o-transform: translateY(-20px); }
+}

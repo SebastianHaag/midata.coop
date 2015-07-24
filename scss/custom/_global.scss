@@ -1,0 +1,44 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+.fullWidth{
+   max-width: 100% !important;
+}
+
+#preload{
+	position: absolute;
+	top:0px;
+	left: 0;
+	z-index: 99999999;
+	height: 1000%;
+	width: 100%;
+	overflow: hidden;
+	background: $white;
+}
+
+// html.noScroll, body.noScroll{
+//    overflow: hidden;
+//    height: auto;
+// }
+header{
+   &#home{
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+   }
+}
+section{
+   height: 80%;
+   width: 100%;
+   &#s1{
+      background-color: $vapor;
+   }
+   &#s2{
+      background-color: $oil;
+   }
+   &#s3{
+      background-color: $silver;
+   }
+}

@@ -1,0 +1,19 @@
+.bullets {
+	padding-left: 0;
+	margin-left: 0;
+	li {
+		list-style: none;
+		background: url('../img/item.png') no-repeat 0 5px;
+		padding-left: 30px;
+		line-height: 2em;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+	.bullets {
+		li {
+			background-image: url('../img/item@2x.png');
+			background-size: 22px 22px;
+		}
+	}
+}
