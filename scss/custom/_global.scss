@@ -30,15 +30,24 @@ header{
    }
 }
 section{
-   height: 80%;
    width: 100%;
+   padding: 60px 0;
    &#s1{
       background-color: $vapor;
+      .hbloc{
+         min-height: 500px;
+      }
    }
    &#s2{
       background-color: $oil;
    }
    &#s3{
       background-color: $silver;
+   }
+}
+
+@media #{$large-up}{
+   section{
+      padding: 120px 0;
    }
 }
