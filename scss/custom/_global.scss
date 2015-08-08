@@ -29,13 +29,41 @@ header{
       opacity: 1;
    }
 }
+
+@media #{$medium-up-portrait}{
+   header{
+      max-height: 50vw;
+   }
+}
 section{
    width: 100%;
    padding: 60px 0;
    &#s1{
-      background-color: $vapor;
-      .hbloc{
-         min-height: 500px;
+      background-color: $white;
+      #intro{
+         padding-bottom: 60px;
+      }
+      #benefits{
+         padding: 0 15px;
+         >div{
+            border-left: solid 3px $info-color;
+            span{
+               color: $primary-color;
+               display: inline-block;
+               padding: 20px;
+               border: solid 3px scale-color($primary-color, $lightness: 80%);
+               border-radius: 100%;
+               -webkit-border-radius: 100%;
+               text-align: center;
+               height: 80px;
+               width: 80px;
+               margin-bottom: 5px;
+            }
+            p{
+               margin-bottom: -6px;
+               max-width: 350px;
+            }
+         }
       }
    }
    &#s2{
