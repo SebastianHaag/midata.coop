@@ -39,6 +39,7 @@ section{
    width: 100%;
    padding: 60px 0;
    &#s1{
+      padding: 60px 0 75px 0;
       background-color: $white;
       #intro{
          padding-bottom: 60px;
@@ -54,28 +55,69 @@ section{
                border: solid 3px scale-color($primary-color, $lightness: 80%);
                border-radius: 100%;
                -webkit-border-radius: 100%;
+               -moz-border-radius: 100%;
                text-align: center;
                height: 80px;
                width: 80px;
                margin-bottom: 5px;
             }
             p{
-               margin-bottom: -6px;
-               max-width: 350px;
+               margin-bottom: 0;
             }
          }
       }
    }
    &#s2{
-      background-color: $oil;
+      background-color: $snow;
+      img{
+         height: 80px;
+         width: 80px;
+         border-radius: 100%;
+         -webkit-border-radius: 100%;
+         -moz-border-radius: 100%;
+         margin-bottom: 8px;
+      }
+      h3{
+         display: inline;
+         padding-left: 15px;
+      }
    }
    &#s3{
-      background-color: $silver;
+      background-color: $primary-color;
+      h2, h3, p{
+         color: $white;
+      }
    }
 }
-
+#form{
+   height: 100%;
+   width: 50vw;
+   position: absolute;
+   z-index: 999;
+   background: rgba(0,184,212,0.75);
+}
+div#map-canvas{
+   height: 100%;
+}
+@media #{$medium-up}{
+   section{
+      &#s1{
+         #benefits{
+            >div{
+               p{
+                  margin-bottom: -6px;
+                  max-width: 340px;
+               }
+            }
+         }
+      }
+   }
+}
 @media #{$large-up}{
    section{
       padding: 120px 0;
+      &#s1{
+         padding: 120px 0 135px 0
+      }
    }
 }
