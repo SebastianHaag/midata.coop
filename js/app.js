@@ -14,15 +14,15 @@ $(document).ready(function() {
          }
       }
    });
-   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      var viewportmeta = document.querySelector('meta[name="viewport"]');
-      if (viewportmeta) {
-         viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
-         document.body.addEventListener('gesturestart', function() {
-            viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.0';
-         }, false);
-      }
-   }
+   // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   //    var viewportmeta = document.querySelector('meta[name="viewport"]');
+   //    if (viewportmeta) {
+   //       viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+   //       document.body.addEventListener('gesturestart', function() {
+   //          viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.0';
+   //       }, false);
+   //    }
+   // }
    $(document).foundation({
    });
 });

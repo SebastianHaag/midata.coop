@@ -1,7 +1,11 @@
 function initialize() {
+   mapCenter={lat: 47.408697, lng: 8.4}
+   if ( $(window).width() <= 801) {
+      mapCenter={lat: 47.408697, lng: 8.507945}
+   }
    var mapOptions = {
       zoom: 12,
-      center: new google.maps.LatLng(47.4086504,8.5088091),
+      center: mapCenter,
       scrollwheel: false,
       panControl: false,
       mapTypeControl: false,
@@ -24,7 +28,7 @@ function initialize() {
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#444444"
+                "color": "#333333"
             }
         ]
     },
@@ -33,16 +37,7 @@ function initialize() {
         "elementType": "all",
         "stylers": [
             {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
+                "color": "#F9F9F9"
             }
         ]
     },
@@ -55,33 +50,6 @@ function initialize() {
             },
             {
                 "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
             }
         ]
     },
@@ -100,6 +68,13 @@ function initialize() {
 ];
 
    map.setOptions({styles: styles});
+
+   var image = 'img/pin.svg';
+   new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(47.408697,8.507945),
+      icon: image,
+   });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -27,13 +27,36 @@ header{
       height: 100%;
       width: 100%;
       opacity: 1;
-      #infoSquare{
+      #infoBox{
          position: absolute;
-         height: 56.25vw;
+         height: 200px;
          width: 100%;
          bottom: 0;
          z-index: 100;
-         background-color: rgba(0,184,212,0.4);
+         background-color: rgba(0,184,212,0.5);
+         padding: 15px 0;
+         h4, h5{
+            color: $white;
+         }
+         a.button.postfix{
+            width: 140px;
+            padding: 6px 0;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-table;
+            margin-top: -9px;
+            background-color: transparent;
+            border: solid 3px $white;
+            color: $white;
+      		background-color: transparent;
+            margin-left: -7px;
+            @include css-transition($short-transition);
+            &:hover, &:active{
+               border: solid 3px $white;
+               background: $white;
+               color: $primary-color;
+            }
+         }
       }
    }
 }
@@ -104,18 +127,47 @@ section{
    h2{
       color: $white;
    }
+   a.colored-bg.button{
+      min-width: 175px;
+      margin-right: 15px;
+      margin-top: -15px;
+   }
 }
 div#map-canvas{
-   height: 80%;
-   min-height: 695px;
+   height: 750px;
+}
+
+footer{
+   background-color: $primary-color;
+   padding: 0 0 15px 0;
+   hr{
+      border: solid $white;
+      border-width: 3px 0 0 0;
+      margin: 0 0 5px 0;
+      border-radius: 3px;
+   	-webkit-border-radius: 3px;
+   	-moz-border-radius: 3px;
+   }
+   small, a{
+      color: $white;
+      margin: 5px 0 15px 0;
+      font-size: rem-calc(13);
+      &:hover, &:active, &:visited{
+         color: $white;
+      }
+   }
 }
 @media #{$medium-up}{
    header{
       &#home{
-         #infoSquare{
-            width: 50vw;
-            height: 50vw;
+         #infoBox{
+            width: calc(50vw - 23px);
+            height: calc(50vw - 23px);
             right: 0;
+            bottom: -72px;
+            max-height: 563px;
+            max-width: 563px;
+            padding: 30px;
          }
       }
    }
@@ -133,15 +185,16 @@ div#map-canvas{
    }
    #form{
       width: 50vw;
-      height: 100%;
+   }
+   div#map-canvas{
+      height: 775px;
    }
 }
 @media #{$large-up}{
    header{
       &#home{
-         #infoSquare{
-            width: 48vw;
-            height: 27vw;
+         #infoBox{
+            left: calc(50vw + 8px);
             bottom: -104px;
          }
       }
@@ -152,18 +205,26 @@ div#map-canvas{
          padding: 90px 0 135px 0
       }
    }
-   div#map-canvas{
-      height: 100%;
+   div#map-canvas, #form{
+      height: 850px;
    }
 }
 
 @media #{$xlarge-up}{
    header{
       &#home{
-         #infoSquare{
-            width: 32vw;
-            height: 18vw;
+         #infoBox{
+            bottom: -133px;
          }
       }
+   }
+   section{
+      padding: 120px 0;
+      &#s1{
+         padding: 120px 0 135px 0
+      }
+   }
+   #form, div#map-canvas{
+      height: 850px;
    }
 }

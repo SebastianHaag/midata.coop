@@ -9,19 +9,32 @@
 .swiper-slide {
 	opacity: 1;
 	background-size: cover;
-	h1{
-		font-size: 6vw;
-	}
-	&#slide1, &#slide3, &#slide5{
-		background-position: 50% 50%;
+	&#slide1{
+		background-position: 40% 50%;
 		h1{
 			color: $white;
 			padding: 55vw 20vw 0 5vw;
 			text-shadow: 0px 2px 6px rgba(0,0,0,0.15);
 		}
 	}
-	&#slide2, &#slide4, &#slide6{
-		background-position: 40% 50%;
+	&#slide2{
+		background-position: 75% 50%;
+		h1{
+			color: $oil;
+			padding: 65vw 5vw 0 25vw;
+			text-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+		}
+	}
+	&#slide3{
+		background-position: 30% 50%;
+		h1{
+			color: $oil;
+			padding: 65vw 5vw 0 25vw;
+			text-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+		}
+	}
+	&#slide4{
+		background-position: 70% 50%;
 		h1{
 			color: $oil;
 			padding: 65vw 5vw 0 25vw;
@@ -35,21 +48,6 @@
 }
 @media #{$medium-up}{
 	.swiper-slide{
-		h1{
-			font-size: 5vw;
-		}
-		&#slide1, &#slide3, &#slide5{
-			background-position: 50% 50%;
-			h1{
-				padding: 25vw 25vw 0 10vw;
-			}
-		}
-		&#slide2, &#slide4, &#slide6{
-			background-position: 50% 50%;
-			h1{
-				padding: 20vw 10vw 0 45vw;
-			}
-		}
 	}
 	.swiper-container-horizontal>.swiper-pagination {
 		width: 75vw;

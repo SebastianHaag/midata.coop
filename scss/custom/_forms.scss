@@ -25,8 +25,27 @@ textarea{
 	margin-top: 20px;
 	background: none;
 	color:$white;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	&:hover, &:focus, &:active{
 		border: solid 3px $secondary-color;
 		background: none;
 	}
+}
+
+::-webkit-input-placeholder {
+   color: $white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $white;
+}
+
+:-ms-input-placeholder {
+   color: $white;
 }

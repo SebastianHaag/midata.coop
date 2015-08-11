@@ -4,14 +4,19 @@
 	padding: 0.8rem 2rem;
 /* WHITE TRANSPARENT BUTTON */
 	&.colored-bg{
-		color: $white !important;
+		color: $white;
 		background-color: transparent;
-		border: solid 2px $white;
+		border: solid 3px $white;
+		border-radius: 30px;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
 		&:hover{
-			background: rgba(255,255,255,0.2);
+			background: $white;
+			color: $primary-color;
 		}
 		&:active{
-			background: rgba(255,255,255,0.4);
+			background: $white;
+			color: $primary-color;
 		}
 	}
 	&.small{
@@ -21,7 +26,7 @@
 	&.primary-color-color{
 		color: $primary-color;
 		background-color: transparent;
-		border: solid 2px $primary-color;
+		border: solid 3x $primary-color;
 		&:hover{
 			background: scale-color($primary-color, $lightness: 80%);
 		}

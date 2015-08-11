@@ -12,34 +12,34 @@
    <div id="preload"></div>
    <nav role="navigation">
       <a href="index.html"><h1 id="logotype">MIDATA<span>.COOP</span></h1></a>
-      <a id="nav-icon" class="hide-for-large-up">
+      <!-- <a id="nav-icon" class="hide-for-large-up">
          <span></span>
          <span></span>
          <span></span>
          <span></span>
-      </a>
+      </a> -->
       <div id="topBarContent" class="row fullWidth">
          <div class="small-12 medium-10 medium-centered large-12 columns text-center large-text-right">
             <ul>
-               <li><a href="index.html">Home</a></li>
+               <li><a href="#home">Home</a></li>
                <hr class="hide-for-large-up">
-               <li><a href="about.html">About</a></li>
+               <li><a href="#s1">About</a></li>
                <hr class="hide-for-large-up">
-               <li><a href="faq.html">Team</a></li>
+               <li><a href="#s2">Team</a></li>
                <hr class="hide-for-large-up">
-               <li><a href="contact.html">Contact</a></li>
+               <li><a href="#s3">Contact</a></li>
                <hr class="hide-for-large-up">
                <br class="hide-for-large-up">
-               <ul id="mLanguageSelector" class="hide-for-large-up">
+               <!-- <ul id="mLanguageSelector" class="hide-for-large-up">
                   <li><a href="#">DE</a></li>
                   <li><a href="#">FR</a></li>
                   <li><a href="#">IT</a></li>
                   <li><a href="#">EN</a></li>
-               </ul>
+               </ul> -->
             </ul>
          </div>
       </div>
-      <div id="languageSelector" class="row fullWidth show-for-large-up">
+      <!-- <div id="languageSelector" class="row fullWidth show-for-large-up">
          <div class="small-12 medium-10 medium-centered large-12 columns text-center large-text-right">
             <ul>
                <li><a href="#">DE</a></li>
@@ -48,32 +48,45 @@
                <li><a href="#">EN</a></li>
             </ul>
          </div>
-      </div>
+      </div> -->
    </nav>
    <header id="home">
-      <div id="infoSquare">
-         
+      <div id="infoBox">
+         <div class="row">
+            <div class="small-12 centered columns">
+               <h4>FIRST PILOTS PROJECTS ARE ABOUT TO START SOON</h4><h5>Stay abreast of Midata advance</h5><br>
+               <form action="" method="post" id="newsletter_subscribe" name="" class="validate" target="_blank" novalidate="">
+	               <div class="row">
+	                    <div class="small-12 columns">
+	                        <div class="row collapse">
+	                           <div class="small-7 large-8 columns">
+	                              <input class="text" type="text" name="EMAIL" id="" placeholder="Enter your email">
+	                           </div>
+	                           <div class="small-5 medium-4 large-2 xxlarge-3 columns end">
+	                              <a href="#" class="colored-bg button postfix">SUBSCRIBE</a>
+	                           </div>
+	                        </div>
+	                     </div>
+	                  </div>
+	                  <input type="hidden" value="" name="uri">
+	                  <input type="hidden" name="loc" value="en_US">
+	            </form>
+            </div>
+         </div>
       </div>
       <!-- Swiper -->
       <div class="swiper-container">
          <div class="swiper-wrapper">
-            <!-- <div id="slide1" class="swiper-slide" style="background-image:url(img/a.jpg)">
-            <h1>I want to control who uses my data and open it to research programs.</h1>
-            </div> -->
-            <div id="slide2" class="swiper-slide" style="background-image:url(img/b.jpg)">
-               <h1>Beeing able to decide who can access my personal data is a basic civil right.</h1>
+            <!-- <h1>I want to control who uses my data and open it to research programs.</h1> -->
+            <!-- <h1>Beeing able to decide who can access my personal data is a basic civil right.</h1> -->
+            <!-- <h1>I believe midata brings a lot to research programs by involving more patients</h1> -->
+            <div id="slide1" class="swiper-slide" style="background-image:url(img/b.jpg)">
             </div>
-            <div id="slide3" class="swiper-slide" style="background-image:url(img/c.jpg)">
-               <h1>I believe midata brings a lot to research programs by involving more patients</h1>
+            <div id="slide2" class="swiper-slide" style="background-image:url(img/c.jpg)">
             </div>
-            <!-- <div id="slide4" class="swiper-slide" style="background-image:url(img/d.jpg)">
-            <h1>Beeing able to decide who can access my personal data is a basic civil right.</h1>
-            </div> -->
-            <div id="slide5" class="swiper-slide" style="background-image:url(img/e.jpg)">
-               <h1>I believe midata brings a lot to research programs by involving more patients</h1>
+            <div id="slide3" class="swiper-slide" style="background-image:url(img/e.jpg)">
             </div>
-            <div id="slide6" class="swiper-slide" style="background-image:url(img/f.jpg)">
-               <h1>I believe midata brings a lot to research programs by involving more patients</h1>
+            <div id="slide4" class="swiper-slide" style="background-image:url(img/f.jpg)">
             </div>
          </div>
          <!-- Add Pagination -->
@@ -107,13 +120,13 @@
       <div class="small-12 medium-4 columns">
          <span class="fi-pencil" title="icon pencil" aria-hidden="true"></span>
          <h3>CONCENT</h3>
-         <p>By forcing researchers to use a simple concent format, Midata enables individuals to use their data for their own benefits and for specific research programms.</p>
+         <p>By offering researchers a simple concent process, Midata enables individuals to open their data for specific research programms and use it for their own benefits.</p>
          <br class="hide-for-medium-up"><br class="hide-for-medium-up">
       </div>
       <div class="small-12 medium-4 columns">
          <span class="fi-lock-locked" title="icon lock locked" aria-hidden="true"></span>
          <h3>SECURITY</h3>
-         <p>Midata contains a strong anonimisation process with multiple encryption. 3rd party API access are only given to trusted developers who work closely to the project.</p>
+         <p>Midata contains a strong anonimisation process with multiple encryption. API access are only given to developers who work closely to the project.</p>
       </div>
    </div>
 </section>
@@ -218,7 +231,7 @@
 </section>
 <section id="form">
    <div class="row">
-      <div class="small-12 large-11 large-centered xlarge-10 xxlarge-9 columns">
+      <div class="small-12 xlarge-centered xlarge-9 xxlarge-6 columns">
          <h2>CONTACT US</h2><br>
          <form>
             <div class="row">
@@ -249,6 +262,11 @@
                   </label>
                </div>
             </div>
+            <div class="row">
+               <div class="small-12 text-right">
+                  <a class="colored-bg button">SEND</a>
+               </div>
+            </div>
          </form>
       </div>
    </div>
@@ -257,7 +275,7 @@
 <section id="s3">
    <div class="row">
       <div class="small-12 columns">
-         <h2>WITH THE SUPPORT OF</h2><br>
+         <h2>SUPPORTED BY</h2><br>
       </div>
    </div>
    <div class="row">
@@ -269,10 +287,31 @@
       </div>
    </div>
 </section>
+<footer>
+   <div class="row fullWidth">
+      <div class="small-12 large-10 large-centered columns">
+         <hr>
+         <small class="left">Copyright © 2015 Midata.coop</small>
+         <small class="right"><a>Legal mentions</a></small>
+      </div>
+</footer>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
 <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="js/app.js"></script>
+<script>
+   var $root = $('html, body');
+      $('a').click(function() {
+      var href = $.attr(this, 'href');
+         $root.animate({
+            scrollTop: $(href).offset().top
+         }, 1000, function () {
+            window.location.hash = href;
+      });
+      return false;
+   });
+</script>
+
 <!-- Initialize Swiper -->
 <script>
 var swiper = new Swiper('.swiper-container', {
