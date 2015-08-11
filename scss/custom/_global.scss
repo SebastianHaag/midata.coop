@@ -27,12 +27,14 @@ header{
       height: 100%;
       width: 100%;
       opacity: 1;
-   }
-}
-
-@media #{$medium-up-portrait}{
-   header{
-      max-height: 50vw;
+      #infoSquare{
+         position: absolute;
+         height: 56.25vw;
+         width: 100%;
+         bottom: 0;
+         z-index: 100;
+         background-color: rgba(0,184,212,0.4);
+      }
    }
 }
 section{
@@ -87,19 +89,36 @@ section{
       h2, h3, p{
          color: $white;
       }
+      img{
+         &.btm45{
+            padding-bottom: 45px;
+         }
+      }
    }
 }
 #form{
-   height: 100%;
-   width: 50vw;
+   width: 100%;
    position: absolute;
    z-index: 999;
    background: rgba(0,184,212,0.75);
+   h2{
+      color: $white;
+   }
 }
 div#map-canvas{
-   height: 100%;
+   height: 80%;
+   min-height: 695px;
 }
 @media #{$medium-up}{
+   header{
+      &#home{
+         #infoSquare{
+            width: 50vw;
+            height: 50vw;
+            right: 0;
+         }
+      }
+   }
    section{
       &#s1{
          #benefits{
@@ -112,12 +131,39 @@ div#map-canvas{
          }
       }
    }
+   #form{
+      width: 50vw;
+      height: 100%;
+   }
 }
 @media #{$large-up}{
+   header{
+      &#home{
+         #infoSquare{
+            width: 48vw;
+            height: 27vw;
+            bottom: -104px;
+         }
+      }
+   }
    section{
-      padding: 120px 0;
+      padding: 90px 0;
       &#s1{
-         padding: 120px 0 135px 0
+         padding: 90px 0 135px 0
+      }
+   }
+   div#map-canvas{
+      height: 100%;
+   }
+}
+
+@media #{$xlarge-up}{
+   header{
+      &#home{
+         #infoSquare{
+            width: 32vw;
+            height: 18vw;
+         }
       }
    }
 }

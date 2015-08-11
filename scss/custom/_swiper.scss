@@ -29,6 +29,10 @@
 		}
 	}
 }
+.swiper-container-horizontal>.swiper-pagination {
+	bottom: 15px;
+	display: none;
+}
 @media #{$medium-up}{
 	.swiper-slide{
 		h1{
@@ -47,7 +51,12 @@
 			}
 		}
 	}
+	.swiper-container-horizontal>.swiper-pagination {
+		width: 75vw;
+		display: inline-block;
+	}
 }
+
 @media #{$large-up}{
 	.swiper-slide{
 		h1{
