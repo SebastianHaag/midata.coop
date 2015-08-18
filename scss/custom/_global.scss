@@ -29,17 +29,25 @@ header{
       opacity: 1;
       #infoBox{
          position: absolute;
-         height: 200px;
+         height: 210px;
          width: 100%;
          bottom: 0;
          z-index: 100;
          background-color: rgba(0,184,212,0.5);
-         padding: 15px 0;
          h4, h5{
             color: $white;
          }
+         h4{
+            padding: 15px 0
+         }
+         h5, form{
+            padding: 0;
+         }
+         input{
+            padding-right: 10px;
+         }
          a.button.postfix{
-            width: 140px;
+            width: 120px;
             padding: 6px 0;
             text-align: center;
             vertical-align: middle;
@@ -60,18 +68,28 @@ header{
       }
    }
 }
+@media #{$small-landscape-only}{
+   header{
+      &#home{
+         height: 200%;
+         #infoBox{
+            bottom: -100%;
+         }
+      }
+   }
+}
 section{
    width: 100%;
    padding: 60px 0;
    &#s1{
-      padding: 60px 0 75px 0;
+      padding: 60px 0 0px 0;
       background-color: $white;
       #intro{
          padding-bottom: 60px;
       }
       #benefits{
          padding: 0 15px;
-         >div{
+         > div {
             border-left: solid 3px $info-color;
             span{
                color: $primary-color;
@@ -89,6 +107,34 @@ section{
             p{
                margin-bottom: 0;
             }
+         }
+      }
+      #community{
+         margin-top: 75px;
+         height: auto;
+         width: 100%;
+         opacity: 1;
+         background-image: url("../img/community.jpg");
+      	background-size: cover;
+      	background-position: 50% 50%;
+         background-repeat: no-repeat;
+         > div > div {
+            background-color: rgba(0,184,212,0.6);
+            padding: 0 15px;
+         }
+         h2{
+            color: $white;
+            padding-top: 60px;
+            margin-bottom: 0;
+         }
+         h4{
+            color: $white;
+            margin-top: 0;
+         }
+         p{
+            color: $white;
+            padding-top: 15px;
+            padding-bottom: 45px;
          }
       }
    }
@@ -161,13 +207,19 @@ footer{
    header{
       &#home{
          #infoBox{
-            width: calc(50vw - 23px);
-            height: calc(50vw - 23px);
+            width: calc(50vw - 15px);
+            height: calc(40vw - 15px);
             right: 0;
             bottom: -72px;
             max-height: 563px;
             max-width: 563px;
-            padding: 30px;
+            h4{
+               padding: 60px 15px 0 15px
+            }
+            h5, form{
+               padding: 0 15px;
+            }
+
          }
       }
    }
@@ -181,6 +233,17 @@ footer{
                }
             }
          }
+         #community{
+            height: 600px
+         }
+      }
+      &#s3{
+         padding-bottom: 30px;
+         img{
+            &.btm45{
+               padding-bottom: 0;
+            }
+         }
       }
    }
    #form{
@@ -188,21 +251,42 @@ footer{
    }
    div#map-canvas{
       height: 775px;
+      img{
+         max-width : none;
+      }
    }
 }
 @media #{$large-up}{
    header{
       &#home{
          #infoBox{
-            left: calc(50vw + 8px);
+            width: 50vw;
+            height: 30vw;
+            left: calc(50vw + 15px);
             bottom: -104px;
+            h4{
+               padding: 65px 30px 0 30px
+            }
+            h5, form{
+               padding: 0 30px;
+            }
+            a.button.postfix{
+               width: 140px;
+            }
          }
       }
    }
    section{
       padding: 90px 0;
       &#s1{
-         padding: 90px 0 135px 0
+         padding: 90px 0 0 0;
+         #community{
+            > div > div {
+               width: calc(50% - 15px);
+               margin-left: 15px;
+               padding: 0 45px;
+            }
+         }
       }
    }
    div#map-canvas, #form{
@@ -215,13 +299,14 @@ footer{
       &#home{
          #infoBox{
             bottom: -133px;
+            height: 397px;
          }
       }
    }
    section{
       padding: 120px 0;
       &#s1{
-         padding: 120px 0 135px 0
+         padding: 120px 0 0 0
       }
    }
    #form, div#map-canvas{

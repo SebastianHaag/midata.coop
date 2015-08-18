@@ -12,7 +12,7 @@ nav{
    height: 60px;
    width: 100%;
    background-color: rgba(0,0,0,0.3);
-   position: fixed;
+   position: absolute;
    top: 0;
    z-index: 99999999;
    -webkit-transform: translate3d(0,0,0);
@@ -256,6 +256,7 @@ nav{
    nav{
       height: 75px;
       background: rgba(0,0,0,0.75);
+      position: fixed;
       h1{
          top:11px;
          left: 15px;

@@ -9,36 +9,16 @@
 .swiper-slide {
 	opacity: 1;
 	background-size: cover;
-	&#slide1{
-		background-position: 40% 50%;
-		h1{
-			color: $white;
-			padding: 55vw 20vw 0 5vw;
-			text-shadow: 0px 2px 6px rgba(0,0,0,0.15);
-		}
-	}
-	&#slide2{
-		background-position: 75% 50%;
-		h1{
-			color: $oil;
-			padding: 65vw 5vw 0 25vw;
-			text-shadow: 0px 2px 6px rgba(0,0,0,0.15);
-		}
-	}
-	&#slide3{
+	&#slide1, &#slide2, &#slide3, &#slide4{
 		background-position: 30% 50%;
 		h1{
-			color: $oil;
-			padding: 65vw 5vw 0 25vw;
-			text-shadow: 0px 2px 6px rgba(0,0,0,0.15);
-		}
-	}
-	&#slide4{
-		background-position: 70% 50%;
-		h1{
-			color: $oil;
-			padding: 65vw 5vw 0 25vw;
-			text-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+			color: $black;
+			padding: 30vw 5vw 0 15vw;
+			text-shadow: 1px -1px 3px rgba(255,255,255,0.3);
+			perspective: 600px;
+			font-size: 7vw;
+			position: absolute;
+			z-index: 1000;
 		}
 	}
 }
@@ -46,8 +26,24 @@
 	bottom: 15px;
 	display: none;
 }
+@media #{$small-landscape-only}{
+	.swiper-slide {
+		&#slide1, &#slide2, &#slide3, &#slide4{
+			background-position: 10% 50%;
+			h1{
+				padding-top: 90px;
+			}
+		}
+	}
+}
 @media #{$medium-up}{
-	.swiper-slide{
+	.swiper-slide {
+		&#slide1, &#slide2, &#slide3, &#slide4{
+			h1{
+				font-size: 4vw;
+				padding: 20vw 5vw 0 30vw;
+			}
+		}
 	}
 	.swiper-container-horizontal>.swiper-pagination {
 		width: 75vw;
@@ -57,21 +53,22 @@
 
 @media #{$large-up}{
 	.swiper-slide{
-		h1{
-			font-size: 4vw;
-		}
-		&#slide1{
-			background-position: 50% 50%;
+		&#slide1, &#slide2, &#slide3, &#slide4{
+			background-position: 40% 50%;
 			h1{
-				color: $white;
-				padding: 15vw 40vw 0 10vw;
+				font-size: 3.5vw;
+				padding: 10vw 5vw 0 30vw;
 			}
 		}
-		&#slide2{
-
-		}
-		&#slide3{
-
+	}
+}
+@media #{$xlarge-up}{
+	.swiper-slide{
+		&#slide1, &#slide2, &#slide3, &#slide4{
+			background-position: 50% 50%;
+			h1{
+				padding: 15vw 5vw 0 33vw;
+			}
 		}
 	}
 }

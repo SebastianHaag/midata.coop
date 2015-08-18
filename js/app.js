@@ -1,6 +1,6 @@
 $(document).ready(function() {
    $(window).load(function() {
-      $("#preload").fadeOut(600);
+      $("#preload").fadeOut(300);
    });
    $('#nav-icon').click(function(){
       $('#nav-icon, #topBarContent').toggleClass('open');
