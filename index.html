@@ -11,23 +11,23 @@
 <body>
    <div id="preload"></div>
    <nav role="navigation">
-      <a href="index.html"><h1 id="logotype">MIDATA<span>.COOP</span></h1></a>
-      <!-- <a id="nav-icon" class="hide-for-large-up">
+      <a href="#home"><h1 id="logotype">MIDATA<span>.COOP</span></h1></a>
+      <a id="nav-icon" class="hide-for-large-up">
          <span></span>
          <span></span>
          <span></span>
          <span></span>
-      </a> -->
+      </a>
       <div id="topBarContent" class="row fullWidth">
          <div class="small-12 medium-10 medium-centered large-12 columns text-center large-text-right">
             <ul>
-               <li><a href="#home">Home</a></li>
+               <li><a class="dataclose" href="#home">Home</a></li>
                <hr class="hide-for-large-up">
-               <li><a href="#s1">About</a></li>
+               <li><a class="dataclose" href="#s1">About</a></li>
                <hr class="hide-for-large-up">
-               <li><a href="#s2">Team</a></li>
+               <li><a class="dataclose" href="#s2">Team</a></li>
                <hr class="hide-for-large-up">
-               <li><a href="#form">Contact</a></li>
+               <li><a class="dataclose" href="#form">Contact</a></li>
                <hr class="hide-for-large-up">
                <br class="hide-for-large-up">
                <!-- <ul id="mLanguageSelector" class="hide-for-large-up">
@@ -39,7 +39,7 @@
             </ul>
          </div>
       </div>
-      <!-- <div id="languageSelector" class="row fullWidth show-for-large-up">
+      <div id="languageSelector" class="row fullWidth show-for-large-up">
          <div class="small-12 medium-10 medium-centered large-12 columns text-center large-text-right">
             <ul>
                <li><a href="#">DE</a></li>
@@ -48,7 +48,7 @@
                <li><a href="#">EN</a></li>
             </ul>
          </div>
-      </div> -->
+      </div>
    </nav>
    <header id="home">
       <div id="infoBox">
@@ -77,16 +77,16 @@
       <!-- Swiper -->
       <div class="swiper-container">
          <div class="swiper-wrapper">
-            <div id="slide1" class="swiper-slide" style="background-image:url(img/a.jpg)">
+            <div id="slide1" class="swiper-slide swiper-lazy" data-background="img/a.jpg">
                <h1>As a patient with a rare disease,<br class="show-for-medium-up"> I would like to share my data and participate in clinical trials </h1>
             </div>
-            <div id="slide2" class="swiper-slide" style="background-image:url(img/b.jpg)">
+            <div id="slide2" class="swiper-slide swiper-lazy" data-background="img/b.jpg">
                <h1>I want to have access to a secure platform on which my patients and I can easily share health related data </h1>
             </div>
-            <div id="slide3" class="swiper-slide" style="background-image:url(img/c.jpg)">
+            <div id="slide3" class="swiper-slide swiper-lazy" data-background="img/c.jpg">
                <h1>I want to control who uses my data and open it to research programs</h1>
             </div>
-            <div id="slide4" class="swiper-slide" style="background-image:url(img/d.jpg)">
+            <div id="slide4" class="swiper-slide swiper-lazy" data-background="img/d.jpg">
                <h1>I want to have access to a secure platform on which my patients and I can easily share health related data </h1>
             </div>
          </div>
@@ -287,11 +287,11 @@
       </div>
    </div>
    <div class="row">
-      <div class="small-12 medium-4 columns">
-         <img src="img/eth-logo.png" class="btm45">
+      <div class="small-12 medium-6 large-5 columns">
+         <img class="btm45 retinaLogo" src="img/eth-logo.png">
       </div>
-      <div class="small-12 medium-6 columns end">
-         <img src="img/bfh-logo.png">
+      <div class="small-12 medium-6 large-5 columns end">
+         <img class="retinaLogo" src="img/bfh-logo.png">
       </div>
    </div>
 </section>
@@ -307,31 +307,6 @@
 <script src="bower_components/foundation/js/foundation.min.js"></script>
 <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="js/app.js"></script>
-<script>
-   var $root = $('html, body');
-      $('a').click(function() {
-      var href = $.attr(this, 'href');
-         $root.animate({
-            scrollTop: $(href).offset().top
-         }, 1000, function () {
-            window.location.hash = href;
-      });
-      return false;
-   });
-</script>
-
-<script>
-var swiper = new Swiper('.swiper-container', {
-   speed: 600,
-   pagination: '.swiper-pagination',
-   paginationClickable: '.swiper-pagination',
-   effect: 'fade',
-   autoplay: 6000,
-   loop: true,
-   preloadImages: false,
-   lazyLoading: true
-});
-</script>
 <script src="js/map.js"></script>
 </body>
 </html>

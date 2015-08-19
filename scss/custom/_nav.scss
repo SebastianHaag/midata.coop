@@ -12,7 +12,7 @@ nav{
    height: 60px;
    width: 100%;
    background-color: rgba(0,0,0,0.3);
-   position: absolute;
+   position: fixed;
    top: 0;
    z-index: 99999999;
    -webkit-transform: translate3d(0,0,0);
@@ -313,6 +313,29 @@ nav{
                }
             }
          }
+      }
+   }
+}
+@media #{$xlarge-up}{
+   nav{
+      h1{
+         padding-left: 5vw
+      }
+      > div > div{
+         max-width: 90vw;
+         margin: 0 auto;
+      }
+   }
+}
+
+@media #{$xxlarge-up}{
+   nav{
+      h1{
+         padding-left: 12.5vw
+      }
+      > div > div{
+         max-width: 75vw;
+         margin: 0 auto;
       }
    }
 }

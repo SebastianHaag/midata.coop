@@ -10,16 +10,20 @@
 	opacity: 1;
 	background-size: cover;
 	&#slide1, &#slide2, &#slide3, &#slide4{
-		background-position: 30% 50%;
+		background-position: 32% 50%;
 		h1{
-			color: $black;
-			padding: 30vw 5vw 0 15vw;
-			text-shadow: 1px -1px 3px rgba(255,255,255,0.3);
+			color: $jet;
+			padding: 30vw 5vw 0 20vw;
+			text-shadow: 1px -1px 0px $white,2px -2px 0px $white;
 			perspective: 600px;
 			font-size: 7vw;
 			position: absolute;
 			z-index: 1000;
+			max-width: 780px;
 		}
+	}
+	&#slide3{
+		background-position: 42% 50%;
 	}
 }
 .swiper-container-horizontal>.swiper-pagination {
@@ -60,6 +64,9 @@
 				padding: 10vw 5vw 0 30vw;
 			}
 		}
+		&#slide3{
+			background-position: 50% 50%;
+		}
 	}
 }
 @media #{$xlarge-up}{
@@ -67,7 +74,20 @@
 		&#slide1, &#slide2, &#slide3, &#slide4{
 			background-position: 50% 50%;
 			h1{
+				font-size: 3vw;
 				padding: 15vw 5vw 0 33vw;
+				max-width: 830px;
+			}
+		}
+	}
+}
+@media #{$xxlarge-up}{
+	.swiper-slide{
+		&#slide1, &#slide2, &#slide3, &#slide4{
+			h1{
+				font-size: 2.5vw;
+				padding: 15vw 5vw 0 33vw;
+				max-width: 980px;
 			}
 		}
 	}

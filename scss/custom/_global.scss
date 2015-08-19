@@ -33,7 +33,7 @@ header{
          width: 100%;
          bottom: 0;
          z-index: 100;
-         background-color: rgba(0,184,212,0.5);
+         background-color: rgba(0,184,212,0.75);
          h4, h5{
             color: $white;
          }
@@ -64,6 +64,16 @@ header{
                background: $white;
                color: $primary-color;
             }
+         }
+      }
+   }
+}
+@media #{$small-phones}{
+   header{
+      &#home{
+         height: 125%;
+         #infoBox{
+            bottom: -25%;
          }
       }
    }
@@ -119,7 +129,7 @@ section{
       	background-position: 50% 50%;
          background-repeat: no-repeat;
          > div > div {
-            background-color: rgba(0,184,212,0.6);
+            background-color: rgba(0,184,212,0.75);
             padding: 0 15px;
          }
          h2{
@@ -160,7 +170,11 @@ section{
       }
       img{
          &.btm45{
-            padding-bottom: 45px;
+            margin-bottom: 45px;
+         }
+         &.retinaLogo{
+            max-height: 75px;
+            width: auto;
          }
       }
    }
