@@ -179,6 +179,15 @@ section{
       }
    }
 }
+#contact{
+   background-color: rgba(0,184,212,0.75);
+   h2{
+      color: $white;
+   }
+   a.colored-bg.button{
+      min-width: 175px;
+   }
+}
 #form{
    width: 100%;
    position: absolute;
@@ -189,8 +198,6 @@ section{
    }
    a.colored-bg.button{
       min-width: 175px;
-      margin-right: 15px;
-      margin-top: -15px;
    }
 }
 div#map-canvas{
