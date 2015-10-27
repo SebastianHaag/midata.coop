@@ -23,17 +23,6 @@ $(document).ready(function() {
       return false;
    });
 
-   var swiper = new Swiper('.swiper-container', {
-      speed: 600,
-      pagination: '.swiper-pagination',
-      paginationClickable: '.swiper-pagination',
-      effect: 'fade',
-      autoplay: 6000,
-      loop: true,
-      preloadImages: false,
-      lazyLoading: true
-   });
-
    document.addEventListener('touchmove', function(e) {
       if($('html.noScroll').length > 0){
          if (($('nav').has($(e.target)).length > 0)) {

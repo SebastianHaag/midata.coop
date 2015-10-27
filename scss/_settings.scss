@@ -220,7 +220,7 @@ $portrait: "#{$screen} and (orientation: portrait)";
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
+$h1-font-size: rem-calc(44);
 // $h2-font-size: rem-calc(37);
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
@@ -228,7 +228,7 @@ $portrait: "#{$screen} and (orientation: portrait)";
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
+$h1-font-reduction: rem-calc(5);
 // $h2-font-reduction: rem-calc(10);
 // $h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);

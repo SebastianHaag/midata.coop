@@ -26,14 +26,41 @@ header{
    &#home{
       height: 100%;
       width: 100%;
+      background-position: 100% 0%;
+      background-repeat: no-repeat;
+      background-color: $snow;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b8d4+0,00b8d4+100&amp;0.01+0,0.75+100 */
+      /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYjhkNCIgc3RvcC1vcGFjaXR5PSIwLjAxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMGI4ZDQiIHN0b3Atb3BhY2l0eT0iMC43NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+      background: -moz-linear-gradient(top,  rgba(0,184,212,0.01) 0%, rgba(0,184,212,0.75) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,184,212,0.01)), color-stop(100%,rgba(0,184,212,0.75))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(0,184,212,0.01) 0%,rgba(0,184,212,0.75) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(0,184,212,0.01) 0%,rgba(0,184,212,0.75) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(0,184,212,0.01) 0%,rgba(0,184,212,0.75) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(0,184,212,0.01) 0%,rgba(0,184,212,0.75) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0300b8d4', endColorstr='#bf00b8d4',GradientType=0 ); /* IE6-8 */
+      // background-image: url("../img/housetest1.png");
+      // opacity: 1;
+      // background-size: cover;
+      // -webkit-background-size: cover;
+      // -moz-background-size: cover;
+      // -o-background-size: cover;
+      // background-attachment: fixed;
       opacity: 1;
+      h1{
+         padding-top: 95px;
+         font-family: 'coco_gothiclight', sans-serif;
+      }
+      h2{
+         font-size: rem-calc(18);
+      }
       #infoBox{
          position: absolute;
          height: 210px;
          width: 100%;
          bottom: 0;
          z-index: 100;
-         background-color: rgba(0,184,212,0.75);
+         background-color: $primary-color;
          h4, h5{
             color: $white;
          }
@@ -124,12 +151,12 @@ section{
          height: auto;
          width: 100%;
          opacity: 1;
-         background-image: url("../img/community.jpg");
+         background-image: url("../img/community-b8.jpg");
       	background-size: cover;
       	background-position: 50% 50%;
          background-repeat: no-repeat;
          > div > div {
-            background-color: rgba(0,184,212,0.75);
+            background-color: rgba($primary-color,0.75);
             padding: 0 15px;
          }
          h2{
@@ -179,22 +206,23 @@ section{
       }
    }
 }
-#form{
-   width: 100%;
-   position: absolute;
-   z-index: 999;
-   background: rgba(0,184,212,0.75);
+#contact{
+   background-color: rgba($primary-color, 0.75);
    h2{
       color: $white;
    }
    a.colored-bg.button{
       min-width: 175px;
-      margin-right: 15px;
-      margin-top: -15px;
    }
 }
-div#map-canvas{
-   height: 750px;
+#contact{
+   width: 100%;
+   h2{
+      color: $white;
+   }
+   a.colored-bg.button{
+      min-width: 175px;
+   }
 }
 
 footer{
@@ -220,6 +248,9 @@ footer{
 @media #{$medium-up}{
    header{
       &#home{
+         h1{
+            padding-top: 120px;
+         }
          #infoBox{
             width: calc(50vw - 15px);
             height: calc(40vw - 15px);
@@ -260,21 +291,16 @@ footer{
          }
       }
    }
-   #form{
-      width: 50vw;
-   }
-   div#map-canvas{
-      height: 775px;
-      img{
-         max-width : none;
-      }
-   }
 }
 @media #{$large-up}{
    header{
       &#home{
+         h1{
+            padding-top: 15vw;
+            font-size: rem-calc(64);
+         }
          #infoBox{
-            width: 50vw;
+            width: calc(50vw -15px);
             height: 30vw;
             left: calc(50vw + 15px);
             bottom: -104px;
@@ -303,14 +329,14 @@ footer{
          }
       }
    }
-   div#map-canvas, #form{
-      height: 850px;
-   }
 }
 
 @media #{$xlarge-up}{
    header{
       &#home{
+         h1{
+            font-size: rem-calc(72);
+         }
          #infoBox{
             bottom: -133px;
             height: 397px;
@@ -323,7 +349,15 @@ footer{
          padding: 120px 0 0 0
       }
    }
-   #form, div#map-canvas{
-      height: 850px;
+}
+
+@media #{$xxlarge-up}{
+   header{
+      &#home{
+         h1{
+            padding-top: 12vw;
+            font-size: rem-calc(80);
+         }
+      }
    }
 }
