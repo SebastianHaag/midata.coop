@@ -2,14 +2,16 @@
    margin: 0;
    padding: 0;
 }
-
+.row .row{
+   margin: 0!important;
+}
 .fullWidth{
    max-width: 100% !important;
 }
 
 #preload{
 	position: absolute;
-	top:0px;
+	top:0;
 	left: 0;
 	z-index: 99999999;
 	height: 1000%;
@@ -24,13 +26,10 @@
 // }
 header{
    &#home{
-      height: 100%;
       width: 100%;
       background-position: 100% 0%;
       background-repeat: no-repeat;
       background-color: $snow;
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b8d4+0,00b8d4+100&amp;0.01+0,0.75+100 */
-      /* IE9 SVG, needs conditional override of 'filter' to 'none' */
       background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYjhkNCIgc3RvcC1vcGFjaXR5PSIwLjAxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMGI4ZDQiIHN0b3Atb3BhY2l0eT0iMC43NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
       background: -moz-linear-gradient(top,  rgba(0,184,212,0.01) 0%, rgba(0,184,212,0.75) 100%); /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,184,212,0.01)), color-stop(100%,rgba(0,184,212,0.75))); /* Chrome,Safari4+ */
@@ -39,20 +38,26 @@ header{
       background: -ms-linear-gradient(top,  rgba(0,184,212,0.01) 0%,rgba(0,184,212,0.75) 100%); /* IE10+ */
       background: linear-gradient(to bottom,  rgba(0,184,212,0.01) 0%,rgba(0,184,212,0.75) 100%); /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0300b8d4', endColorstr='#bf00b8d4',GradientType=0 ); /* IE6-8 */
-      // background-image: url("../img/housetest1.png");
-      // opacity: 1;
-      // background-size: cover;
-      // -webkit-background-size: cover;
-      // -moz-background-size: cover;
-      // -o-background-size: cover;
-      // background-attachment: fixed;
       opacity: 1;
-      h1{
-         padding-top: 95px;
-         font-family: 'coco_gothiclight', sans-serif;
-      }
-      h2{
-         font-size: rem-calc(18);
+      > div{
+         padding: 90px 0;
+         b{
+            color: $snow;
+            font-family: 'coco_gothicheavy', sans-serif;
+            font-size: 15vw;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            padding-top: 60px;
+            span{
+               font-size: 50%;
+            }
+         }
+         h1{
+            color: $snow;
+            font-family: 'coco_gothiclight', sans-serif;
+            font-size: 12vw;
+         }
       }
       #infoBox{
          position: absolute;
@@ -118,11 +123,55 @@ header{
 section{
    width: 100%;
    padding: 60px 0;
-   &#s1{
-      padding: 60px 0 0px 0;
+   &#preview{
+      padding: 0;
+      background-color: rgba(0,184,212,0.75);
+      >div >div{
+         min-height: 200px;
+         @include css-transition($short-transition);
+         &:hover{
+            cursor: pointer;
+         }
+         h4{
+            color: $white;
+            padding: 80px;
+         }
+         &.lighter{
+            background-color: lighten($primary-color, 15%);
+            &:hover, &:active{
+               background-color: lighten($primary-color, 5%);
+            }
+         }
+         &.primary-color{
+            background-color: $primary-color;
+            &:hover, &:active{
+               background-color: darken($primary-color, 5%);
+            }
+         }
+         &.darker{
+            background-color: darken($primary-color, 10%);
+            &:hover, &:active{
+               background-color: darken($primary-color, 15%);
+            }
+         }
+      }
+
+   }
+   &#about{
       background-color: $white;
-      #intro{
-         padding-bottom: 60px;
+      h2{
+         padding-top: 45px;
+      }
+      fieldset{
+         border: solid 3px $primary-color;
+         border-radius: 10px;
+         -webkit-border-radius: 10px;
+         -moz-border-radius: 10px;
+         legend{
+            text-align: right;
+            font-size: $h2-font-size;
+            padding: 0 10px;
+         }
       }
       #benefits{
          padding: 0 15px;
@@ -175,7 +224,41 @@ section{
          }
       }
    }
-   &#s2{
+   &#projects{
+      background: $primary-color;
+      h4, h5{
+         color: $white;
+      }
+      h4{
+         padding: 15px 0
+      }
+      h5, form{
+         padding: 0;
+      }
+      input{
+         padding-right: 10px;
+      }
+      a.button.postfix{
+         width: 120px;
+         padding: 6px 0;
+         text-align: center;
+         vertical-align: middle;
+         display: inline-table;
+         margin-top: -9px;
+         background-color: transparent;
+         border: solid 3px $white;
+         color: $white;
+         background-color: transparent;
+         margin-left: -7px;
+         @include css-transition($short-transition);
+         &:hover, &:active{
+            border: solid 3px $white;
+            background: $white;
+            color: $primary-color;
+         }
+      }
+   }
+   &#people{
       background-color: $snow;
       img{
          height: 80px;
@@ -190,7 +273,7 @@ section{
          padding-left: 15px;
       }
    }
-   &#s3{
+   &#partners{
       background-color: $primary-color;
       h2, h3, p{
          color: $white;
@@ -208,15 +291,6 @@ section{
 }
 #contact{
    background-color: rgba($primary-color, 0.75);
-   h2{
-      color: $white;
-   }
-   a.colored-bg.button{
-      min-width: 175px;
-   }
-}
-#contact{
-   width: 100%;
    h2{
       color: $white;
    }
@@ -248,8 +322,10 @@ footer{
 @media #{$medium-up}{
    header{
       &#home{
-         h1{
-            padding-top: 120px;
+         >div{
+            h1{
+               font-size: 8vw;
+            }
          }
          #infoBox{
             width: calc(50vw - 15px);
@@ -269,12 +345,12 @@ footer{
       }
    }
    section{
-      &#s1{
+      &#about{
          #benefits{
             >div{
+               margin-bottom: 45px;
                p{
                   margin-bottom: -6px;
-                  max-width: 340px;
                }
             }
          }
@@ -282,7 +358,7 @@ footer{
             height: 600px
          }
       }
-      &#s3{
+      &#partners{
          padding-bottom: 30px;
          img{
             &.btm45{
@@ -295,10 +371,16 @@ footer{
 @media #{$large-up}{
    header{
       &#home{
-         h1{
-            padding-top: 15vw;
-            font-size: rem-calc(64);
+         > div{
+            padding-top: 180px;
+            b{
+               font-size: rem-calc(144);
+            }
+            h1{
+               font-size: rem-calc(64);
+            }
          }
+
          #infoBox{
             width: calc(50vw -15px);
             height: 30vw;
@@ -318,8 +400,8 @@ footer{
    }
    section{
       padding: 90px 0;
-      &#s1{
-         padding: 90px 0 0 0;
+      &#about{
+         padding-top: 75px;
          #community{
             > div > div {
                width: calc(50% - 15px);
@@ -334,30 +416,18 @@ footer{
 @media #{$xlarge-up}{
    header{
       &#home{
-         h1{
-            font-size: rem-calc(72);
-         }
          #infoBox{
             bottom: -133px;
             height: 397px;
          }
-      }
-   }
-   section{
-      padding: 120px 0;
-      &#s1{
-         padding: 120px 0 0 0
-      }
-   }
-}
-
-@media #{$xxlarge-up}{
-   header{
-      &#home{
          h1{
-            padding-top: 12vw;
             font-size: rem-calc(80);
          }
       }
    }
+   section{
+   }
+}
+
+@media #{$xxlarge-up}{
 }
