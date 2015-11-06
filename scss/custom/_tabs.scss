@@ -1,0 +1,30 @@
+li.tab-title{
+   a{
+      @include css-transition($short-transition);
+      &#teamppl{
+         border-radius: 3px 0 0 0;
+         -webkit-border-radius: 3px 0 0 0;
+         -moz-border-radius: 3px 0 0 0;
+         -o-border-radius: 3px 0 0 0;
+         -ms-border-radius: 3px 0 0 0;
+      }
+      &#advisoryppl{
+         border-radius: 0 3px 0 0;
+         -webkit-border-radius: 0 3px 0 0;
+         -moz-border-radius: 0 3px 0 0;
+         -o-border-radius: 0 3px 0 0;
+         -ms-border-radius: 0 3px 0 0;
+      }
+   }
+
+}
+
+.tabs-content{
+   background-color: $white;
+   border-radius: 0 10px 10px 10px;
+   -webkit-border-radius: 0 10px 10px 10px;
+   -moz-border-radius: 0 10px 10px 10px;
+   -o-border-radius: 0 10px 10px 10px;
+   -ms-border-radius: 0 10px 10px 10px;
+   @include css-transition($short-transition);
+}

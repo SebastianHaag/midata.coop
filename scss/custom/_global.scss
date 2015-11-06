@@ -175,6 +175,7 @@ section{
       }
       #benefits{
          padding: 0 15px;
+         padding-top: 5px;
          > div {
             border-left: solid 3px $info-color;
             span{
@@ -260,17 +261,33 @@ section{
    }
    &#people{
       background-color: $snow;
-      img{
+      .pplPic{
          height: 80px;
          width: 80px;
-         border-radius: 100%;
-         -webkit-border-radius: 100%;
-         -moz-border-radius: 100%;
-         margin-bottom: 8px;
+         float: left;
+         padding-top: 15px;
+         img{
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+         }
       }
-      h3{
-         display: inline;
-         padding-left: 15px;
+      .pplDesc{
+         padding-left: 95px;
+         padding-top: 15px;
+         span{
+            margin-top: 15px;
+            display: inline;
+         }
+         i{
+            display: inline;
+         }
+         a.button.tiny{
+            padding: 0.4rem 0.8rem;
+            margin-top: 5px;
+         }
       }
    }
    &#partners{
@@ -401,7 +418,11 @@ footer{
    section{
       padding: 90px 0;
       &#about{
-         padding-top: 75px;
+         #benefits{
+            > div{
+               min-height: 305px;
+            }
+         }
          #community{
             > div > div {
                width: calc(50% - 15px);
@@ -426,6 +447,13 @@ footer{
       }
    }
    section{
+      &#about{
+         #benefits{
+            > div{
+               min-height: 280px;
+            }
+         }
+      }
    }
 }
 
