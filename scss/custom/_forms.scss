@@ -50,3 +50,17 @@ textarea{
 :-ms-input-placeholder {
    color: $white;
 }
+
+button.button{
+	width: 120px;
+}
+
+p.error{
+	text-transform: uppercase;
+	font-weight: 600;
+	color: $warning-color;
+	background-color: $white;
+	padding: 15px;
+	border-radius: 3px;
+	border: solid $white 2px;
+}
