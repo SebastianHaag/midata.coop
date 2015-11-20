@@ -59,12 +59,10 @@ if($error != '') {
 
    if(mail($address, $e_subject, $msg, "From: $email\r\nReturn-Path: $email\r\n")) {
 
-      echo "<fieldset>";
       echo "<div id='success_page'>";
       echo "<h4>Your message has sucessfully been sent</h4>";
-      echo "<h6>Thank you <strong>$firstname $lastname</strong>, we will get back to you as soon as possible.</h6><br>";
+      echo "<h6>Thank you <strong>$firstname $lastname</strong>, we will get back to you as soon as possible.</h6>";
       echo "</div>";
-      echo "</fieldset>";
 
    } else {
 

@@ -11,7 +11,7 @@
 nav{
    height: 60px;
    width: 100%;
-   background-color: rgba(0,0,0,0.5);
+   background-color: $charcoal;
    position: fixed;
    top: 0;
    z-index: 99999999;
@@ -153,6 +153,7 @@ nav{
 }
 
 
+
 #nav-icon {
   width: 27px;
   height: 46px;
@@ -229,7 +230,16 @@ nav{
   width: 0%;
   left: 50%;
 }
-
+@media #{$small-phones}{
+   nav>div#topBarContent ul{
+      li a{
+         margin: 0;
+      }
+      hr{
+         margin: 10px;
+      }
+   }
+}
 @media #{$medium-up}{
    nav{
       #nav-icon {

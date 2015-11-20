@@ -1,22 +1,12 @@
 li.tab-title{
    a{
       @include css-transition($short-transition);
-      &#teamppl{
-         border-radius: 3px 0 0 0;
-         -webkit-border-radius: 3px 0 0 0;
-         -moz-border-radius: 3px 0 0 0;
-         -o-border-radius: 3px 0 0 0;
-         -ms-border-radius: 3px 0 0 0;
-      }
-      &#advisoryppl{
-         border-radius: 0 3px 0 0;
-         -webkit-border-radius: 0 3px 0 0;
-         -moz-border-radius: 0 3px 0 0;
-         -o-border-radius: 0 3px 0 0;
-         -ms-border-radius: 0 3px 0 0;
-      }
+      border-top: solid 3px $white;
+      border-right: solid 3px $white;
    }
-
+}
+.tabs dd.active a, .tabs .tab-title.active a{
+   background-color: $info-color;
 }
 
 .tabs-content{
@@ -27,4 +17,54 @@ li.tab-title{
    -o-border-radius: 0 10px 10px 10px;
    -ms-border-radius: 0 10px 10px 10px;
    @include css-transition($short-transition);
+}
+
+.tabs dd>a, .tabs .tab-title>a{
+   font-size: 1.4rem;
+   padding: 0.5rem 4.5rem;
+}
+
+@media #{$small-with-phones}{
+   .tabs dd>a, .tabs .tab-title>a{
+      padding: 0.05rem 1rem;
+   }
+}
+@media #{$sm-with-phones}{
+   li.tab-title{
+      &:first-of-type a{
+         border-left: solid 3px $white;
+      }
+      a{
+         border-bottom: solid 3px $white;
+         &#teamppl{
+            border-radius: 3px 0 0 0;
+            -webkit-border-radius: 3px 0 0 0;
+            -moz-border-radius: 3px 0 0 0;
+            -o-border-radius: 3px 0 0 0;
+            -ms-border-radius: 3px 0 0 0;
+         }
+         &#advisoryppl{
+            border-radius: 0 3px 0 0;
+            -webkit-border-radius: 0 3px 0 0;
+            -moz-border-radius: 0 3px 0 0;
+            -o-border-radius: 0 3px 0 0;
+            -ms-border-radius: 0 3px 0 0;
+         }
+      }
+   }
+   .tabs dd>a, .tabs .tab-title>a{
+      padding: 0.5rem 1.5rem;
+   }
+}
+
+@media #{$medium-up}{
+   li.tab-title{
+      &:first-of-type a{
+         border-left: solid 3px $white;
+      }
+   }
+   .tabs dd>a, .tabs .tab-title>a{
+      font-size: 1rem;
+      padding: 0.8rem 1.6rem;
+   }
 }
