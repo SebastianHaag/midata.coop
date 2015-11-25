@@ -1,2 +1,8 @@
 User-agent: *
-Disallow: /
+Disallow: /_preview
+Disallow: /favicons
+Disallow: /img/adv
+Disallow: /img/int
+Disallow: /img/part
+Disallow: /img/team
+Disallow: /contact_form.php

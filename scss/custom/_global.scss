@@ -179,6 +179,18 @@ section{
                height: 80px;
                width: 80px;
                margin-bottom: 5px;
+               &.fi-command{
+                  padding-left: 24px;
+               }
+               &.fi-fork{
+                  padding: 23px 25px;
+               }
+               &.fi-lock-locked{
+                  padding-top: 19px;
+               }
+               &.fi-globe{
+                  padding: 22px;
+               }
             }
             p{
                margin-bottom: 0;

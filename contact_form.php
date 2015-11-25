@@ -8,7 +8,7 @@ if(!$_POST) exit;
 
 // Enter the email address that you want to emails to be sent to.
 
-$address = "hello@sebastianhaag.me";
+$address = "hafen@imsb.biol.ethz.ch";
 
 
 // END OF Simple Configuration Options
