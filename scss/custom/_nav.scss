@@ -11,12 +11,17 @@
 nav{
    height: 60px;
    width: 100%;
-   background-color: rgba(0,0,0,0.3);
+   background-color: $charcoal;
    position: fixed;
    top: 0;
    z-index: 99999999;
    -webkit-transform: translate3d(0,0,0);
    backface-visibility: hidden;
+   &.scrolledlogo{
+      h1{
+         opacity: 1;
+      }
+   }
    h1{
       position: fixed;
       top: 5px;
@@ -24,6 +29,7 @@ nav{
       color: $white;
       font-family: 'coco_gothicheavy';
       font-size: 2.125rem;
+      opacity: 0;
       span{
          font-size: 50%;
       }
@@ -147,6 +153,7 @@ nav{
 }
 
 
+
 #nav-icon {
   width: 27px;
   height: 46px;
@@ -223,7 +230,16 @@ nav{
   width: 0%;
   left: 50%;
 }
-
+@media #{$small-phones}{
+   nav>div#topBarContent ul{
+      li a{
+         margin: 0;
+      }
+      hr{
+         margin: 10px;
+      }
+   }
+}
 @media #{$medium-up}{
    nav{
       #nav-icon {
@@ -255,8 +271,18 @@ nav{
 @media #{$large-up}{
    nav{
       height: 75px;
-      background: rgba(0,0,0,0.75);
       position: fixed;
+      background-color: transparent;
+      @include css-transition($normal-transition);
+      >div#topBarContent ul li a{
+         color: $oil;
+      }
+      &.scrolledlogo{
+         background-color: $oil;
+         >div#topBarContent ul li a{
+            color: $white;
+         }
+      }
       h1{
          top:11px;
          left: 15px;
@@ -284,11 +310,13 @@ nav{
                }
                a{
                   display: inline;
-                  color: $white;
                   font-family: 'coco_gothicregular';
                   @include css-transition($normal-transition);
                   &:hover, &:active, &:focus{
-                     color: $gainsboro;
+                     color: lighten($primary-color, 15%);
+                  }
+                  &.active{
+                     color: $primary-color;
                   }
                }
             }

@@ -1,0 +1,50 @@
+li.tab-title{
+   a{
+      @include css-transition($short-transition);
+      border-top: solid 3px $white;
+      border-right: solid 3px $white;
+   }
+}
+.tabs dd.active a, .tabs .tab-title.active a{
+   background-color: $info-color;
+}
+
+.tabs-content{
+   background-color: $white;
+   border-radius: 0 10px 10px 10px;
+   -webkit-border-radius: 0 10px 10px 10px;
+   -moz-border-radius: 0 10px 10px 10px;
+   -o-border-radius: 0 10px 10px 10px;
+   -ms-border-radius: 0 10px 10px 10px;
+   @include css-transition($short-transition);
+}
+
+.tabs dd>a, .tabs .tab-title>a{
+   font-size: 1.4rem;
+   padding: 0.5rem 4.5rem;
+}
+
+@media #{$small-with-phones}{
+   .tabs dd>a, .tabs .tab-title>a{
+      font-size: 1.4rem;
+      padding: 0.05rem 1rem;
+   }
+}
+@media #{$medium-with-phones}{
+   .tabs dd>a, .tabs .tab-title>a{
+      font-size: 1.6rem;
+      padding: 0.05rem 2.5rem;
+   }
+}
+
+@media #{$medium-up}{
+   li.tab-title{
+      &:first-of-type a{
+         border-left: solid 3px $white;
+      }
+   }
+   .tabs dd>a, .tabs .tab-title>a{
+      font-size: 1rem;
+      padding: 0.8rem 1.6rem;
+   }
+}
