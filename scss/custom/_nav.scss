@@ -333,11 +333,22 @@ nav{
                display: inline-block;
                a{
                   font-size: 75%;
-                  color: $white;
+                  color: $oil;
                   @include css-transition($normal-transition);
                   &:hover, &:active, &:focus{
                      color: $gainsboro;
                   }
+               }
+            }
+         }
+         &.scrolledlogo{
+            ul li a{
+               color: $white;
+               &:hover, &:active, &:focus{
+                  color: lighten($primary-color, 15%);
+               }
+               &.active{
+                  color: $primary-color;
                }
             }
          }

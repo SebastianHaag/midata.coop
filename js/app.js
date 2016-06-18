@@ -32,9 +32,9 @@ $(document).ready(function() {
 
    $(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
-            $("nav").addClass("scrolledlogo");
+            $("nav, #languageSelector").addClass("scrolledlogo");
         } else {
-            $("nav").removeClass("scrolledlogo");
+            $("nav, #languageSelector").removeClass("scrolledlogo");
         }
    });
 });
