@@ -44,11 +44,11 @@ $(document).ready(function () {
     $(document).on("scroll", onScroll);
 
     //smoothscroll
-    $('nav ul li a').on('click', function (e) {
+    $('nav ul li a.dataclose').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
 
-        $('nav ul li a').each(function () {
+        $('nav ul li a.dataclose').each(function () {
             $(this).removeClass('active');
         })
         $(this).addClass('active');
@@ -68,11 +68,11 @@ $(document).ready(function () {
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-    $('nav ul li a').each(function () {
+    $('nav ul li a.dataclose').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top - 70 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('nav ul li a').removeClass("active");
+            $('nav ul li a.dataclose').removeClass("active");
             currLink.addClass("active");
         }
         else{

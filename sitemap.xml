@@ -1,7 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
    <url>
-      <loc>http://midata.coop/_preview/</loc>
-      <priority>1</priority>
+
+      <loc>https://www.midata.coop/index.html</loc>
+
+      <xhtml:link
+         rel="alternate"
+         hreflang="de"
+         href="https://www.midata.coop/de.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="fr"
+         href="https://www.midata.coop/fr.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="it"
+         href="http://www.example.com/it.html"
+      />
+
    </url>
+
+   <url>
+
+      <loc>https://www.midata.coop/de.html</loc>
+
+      <xhtml:link
+         rel="alternate"
+         hreflang="fr"
+         href="https://www.midata.coop/fr.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="it"
+         href="http://www.example.com/it.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="https://www.midata.coop/index.html"
+      />
+
+   </url>
+
+   <url>
+
+      <loc>https://www.midata.coop/fr.html</loc>
+
+      <xhtml:link
+         rel="alternate"
+         hreflang="de"
+         href="https://www.midata.coop/de.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="it"
+         href="https://www.midata.coop/it.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="http://www.example.com/index.html"
+      />
+
+   </url>
+
+   <url>
+
+      <loc>https://www.midata.coop/it.html</loc>
+
+      <xhtml:link
+         rel="alternate"
+         hreflang="de"
+         href="https://www.midata.coop/de.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="fr"
+         href="https://www.midata.coop/fr.html"
+      />
+      <xhtml:link
+         rel="alternate"
+         hreflang="en"
+         href="http://www.example.com/index.html"
+      />
+
+   </url>
+
 </urlset>
